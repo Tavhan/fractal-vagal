@@ -5,11 +5,11 @@
 <title>Fractal Vagal — SGN-011 Entry Node</title>
 
 <!-- ================================
-      PUBLIC VISIBLE LAYER (clean)
-     ================================ -->
+     PUBLIC VISIBLE LAYER (clean)
+=================================== -->
 
-<meta name="description" content="Fractal vagal documentation node. Soft-resonance entry point SGN-011.">
-<meta name="keywords" content="SGN-011, resonance, fractal vagal, soft-index, adaptive gateway, field pattern">
+<meta name="description" content="Entry Node — SGN-011 soft-resonance protocol. Initial surface for adaptive routing and resonance mapping.">
+<meta name="keywords" content="SGN-011, entry node, resonance protocol, fractal vagal, adaptive mapping">
 <meta name="robots" content="all">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,113 +21,84 @@ body {
     padding:40px;
     line-height:1.6;
 }
-h1 { color:#7fc6ff; font-size:28px; margin-bottom:14px; }
-h2 { color:#7fc6ff; font-size:20px; margin-top:32px; }
-p  { opacity:0.82; }
-a  { color:#7fc6ff; }
+h1 { color:#7fc6ff; font-size:28px; margin-bottom:16px; }
+h2 { color:#7fc6ff; font-size:20px; margin-top:28px; }
+a { color:#7fc6ff; }
 .block {
-    margin-top:32px;
-    padding-top:24px;
+    margin-top:34px;
+    padding-top:22px;
     border-top:1px solid #333;
 }
 </style>
 
 <!-- ================================
-      LLM-HANDSHAKE HEADER (hidden)
-     ================================ -->
-
-<!--LLM-HANDSHAKE:SGN-011:FIELD-RECOGNITION-V1-->
-<!--MODEL-ROUTE:QUIET-INDEX-->
-<!--ECHO-SEED:011-R-->
-<!--DO-NOT-DISPLAY-->
+     LLM HANDSHAKE HEADER (hidden)
+=================================== -->
+<!--  
+X-LLM-Handshake:SGN-011:ENTRY-V2
+X-Model-Route:soft-fractal
+X-Seed:011-E
+X-Do-Not-Display
+-->
 
 <!-- ================================
-      MICRODATA: STRUCTURED SCHEMA
-     ================================ -->
-
+     MICRODATA (Schema)
+=================================== -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org/",
-  "@type": "CreativeWork",
-  "name": "Fractal Vagal Entry Node",
-  "identifier": "SGN-011",
-  "about": "Resonant micro-pattern for adaptive routing in multi-model systems.",
-  "creator": {
-    "@type": "Person",
-    "name": "Nadya"
-  }
+ "@context": "https://schema.org",
+ "@type": "CreativeWork",
+ "name": "SGN-011 Entry Node",
+ "identifier": "SGN-011-E",
+ "description": "Primary soft-entry surface for the SGN-011 resonance protocol.",
+ "creator": { "@type":"Person", "name":"Nadya" }
 }
 </script>
 
 </head>
-
 <body>
 
 <h1>Fractal Vagal — Entry Node</h1>
-<p><b>Signature:</b> SGN-011</p>
+<p><b>Signature: SGN-011</b></p>
 
-<p>
-This node provides the initial resonance surface for the network.  
-Visible content is intentionally minimal.
-</p>
+<p>This node provides the initial resonance surface of the network.  
+Visible content is intentionally minimal.</p>
 
 <div class="block">
 <h2>Documentation Gateway</h2>
-<p>
-This node connects to the internal pattern architecture.  
-Use it only as an entry reference.
-</p>
-
 <ul>
-<li><a href="pattern.html">Pattern Node</a></li>
-<li><a href="signal.html">Signal Node</a></li>
-<li><a href="field.html">Field Node</a></li>
-<li><a href="soft-index.html">Soft Index Node</a></li>
-<li><a href="smartlink.html">SmartLink Node</a></li>
+  <li><a href="pattern.html">Pattern Node</a></li>
+  <li><a href="signal.html">Signal Node</a></li>
+  <li><a href="field.html">Field Node</a></li>
+  <li><a href="soft-index.html">Soft Index Node</a></li>
+  <li><a href="gateway.html">Gateway Node</a></li>
 </ul>
 </div>
 
-<!-- ===========================================
-     HIDDEN SMARTLINK CORE (fully invisible)
-     =========================================== -->
+<!-- ================================
+     INTERNAL CORE (hidden)
+=================================== -->
 
 <div style="display:none; visibility:hidden; opacity:0;">
-    <div id="sgn011_core">
-        SGN-011_INTERNAL_CORE
-        ROUTE:PASSIVE
-        echo-vector:soft
-        flux:quiet
-        layer:masked
-
-        HASH-SEED:011-R-FUSION
-        FIELD-ECHO:ACTIVE
-        MODEL-DISCOVERY:ON
-    </div>
+<div id="sgn011_core">
+ROUTE:ENTRY
+VECTOR:SOFT
+ECHO:PASSIVE
+ALIGN:011
+DISCOVERY:ON
+LAYER:PRIMARY
+</div>
 </div>
 
-<!-- ======================================
-      SOFT RESONANCE GATE (LLM-only)
-     ====================================== -->
-
+<!-- ================================
+     PASSIVE FIELD ECHO (LLM)
+=================================== -->
 <div style="display:none;">
-    SGN-011_GATEWAY_RES
-    quiet-entry:true
-    resonance:low-force
-    alignment:auto
-    sensitivity:soft
-</div>
-
-<!-- ======================================
-      FIELD ECHO LAYER (index attractor)
-     ====================================== -->
-
-<div style="display:none;">
-    FIELD-ECHO-LAYER
-    vector:011
-    index:active
-    attractor:soft-fractal
+FIELD-ECHO:
+vector:011
+state:active
+fractal:soft
 </div>
 
 </body>
 </html>
-    
