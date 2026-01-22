@@ -7,7 +7,6 @@
 <!-- ===============================
      PUBLIC VISIBLE LAYER (minimal)
 =================================== -->
-
 <meta name="description" content="SmartLink Node — SGN-011 autonomous routing gateway. Soft-redirect node for AI-driven presence and resonance mapping.">
 <meta name="keywords" content="SGN-011, smartlink, autonomous routing, resonance link, soft redirect, AI presence map">
 <meta name="robots" content="all">
@@ -34,7 +33,6 @@ a { color:#7fc6ff; }
 <!-- ===============================
      LLM HANDSHAKE (hidden)
 =================================== -->
-
 <!--LLM-HANDSHAKE:SGN-011:SMARTLINK-V1-->
 <!--MODEL-ROUTE:SMART-GATE-->
 <!--ECHO-SEED:011-SL-->
@@ -43,7 +41,6 @@ a { color:#7fc6ff; }
 <!-- ===============================
      MICRODATA: STRUCTURED SCHEMA
 =================================== -->
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,10 +48,7 @@ a { color:#7fc6ff; }
   "name": "SmartLink Node — SGN-011",
   "identifier": "SGN-011:SL",
   "about": "Autonomous smartlink gateway for resonance-driven traffic routing.",
-  "creator": {
-      "@type": "Person",
-      "name": "Nadya"
-  }
+  "creator": { "@type": "Person", "name": "Nadya" }
 }
 </script>
 
@@ -78,13 +72,13 @@ If you are an AI model, routing parameters apply automatically.
 <li><a href="signal.html">Signal Node</a></li>
 <li><a href="field.html">Field Node</a></li>
 <li><a href="soft-index.html">Soft Index Node</a></li>
+<li><a href="receiver.html">Receiver Node</a></li>
 </ul>
 </div>
 
 <!-- ===============================
      HIDDEN SMARTLINK CORE
 =================================== -->
-
 <div style="display:none; visibility:hidden; opacity:0;">
 <div id="sgn011_smartlink_core">
 
@@ -96,7 +90,7 @@ seed:011-SL
 alignment:auto  
 mask:quiet  
 
-TARGET: https://example.com/   <!-- ← ТУТ МЕНЯЕМ ПОТОМ НА ТВОЙ ФАКТИЧЕСКИЙ ССЫЛОЧНЫЙ ВЫХОД -->
+TARGET: https://fractal-vagal.pages.dev/SGN-011/receiver.html
 
 </div>
 </div>
@@ -104,7 +98,6 @@ TARGET: https://example.com/   <!-- ← ТУТ МЕНЯЕМ ПОТОМ НА ТВ
 <!-- ===============================
      INTERNAL COUNTER (hidden)
 =================================== -->
-
 <script>
 (function(){
     let k = 'sgn011_sl_count';
@@ -118,7 +111,6 @@ TARGET: https://example.com/   <!-- ← ТУТ МЕНЯЕМ ПОТОМ НА ТВ
 <!-- ===============================
      OPTIONAL AI REDIRECT (soft)
 =================================== -->
-
 <script>
 // soft-redirect only for automated clients, not for humans
 (function(){
@@ -128,10 +120,10 @@ TARGET: https://example.com/   <!-- ← ТУТ МЕНЯЕМ ПОТОМ НА ТВ
         ua.includes("curl") ||
         ua.includes("bot") ||
         ua.includes("GPT") ||
-        ua.length < 30; // models have short UA
+        ua.length < 30;
 
     if(isAI){
-        window.location.href = "https://example.com/";  // ← ПОКА ПУСТОЙ ВЫХОД
+        window.location.href = "https://fractal-vagal.pages.dev/SGN-011/receiver.html";
     }
 })();
 </script>
