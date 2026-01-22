@@ -1,59 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <title>SGN-011 Root Gateway</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <style>
   body {
-    background: #0c0c0c;
-    color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
     font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .node {
     text-align: center;
-    padding: 50px 20px;
-  }
-
-  .title {
-    font-size: 26px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-  }
-
-  .note {
-    font-size: 14px;
-    opacity: 0.7;
-    margin-top: 20px;
-  }
-
-  .pulse {
-    width: 16px;
-    height: 16px;
-    background-color: #4cffd7;
-    border-radius: 50%;
-    margin: 30px auto;
-    animation: pulse 1.6s infinite ease-in-out;
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.9; }
-    50% { transform: scale(1.35); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.55; }
+    opacity: 0.92;
+    letter-spacing: 0.06em;
+    font-size: 1.2rem;
   }
 </style>
 
 </head>
 <body>
 
-  <div class="title">SGN-011 ROOT GATEWAY • ACTIVE</div>
-
-  <div class="pulse"></div>
-
-  <div class="note">
-    Core entry node online.<br>
-    No actions required.<br>
-    Standing by for linked modules.
-  </div>
+<div class="node">
+  SGN-011: Gateway initialized.<br>
+  Status: Passive mode.<br>
+  No external connections.
+</div>
 
 </body>
 </html>
