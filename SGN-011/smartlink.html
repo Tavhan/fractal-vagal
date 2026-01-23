@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SGN-011 SmartLink</title>
+  <title>SGN-011 SmartLink — C1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="robots" content="all">
-  <meta name="description" content="Primary SmartLink node of SGN-011 autonomous resonance network.">
+  <meta name="description" content="SGN-011 SmartLink — Autonomous Resonance Node, Level C.1 ProtoSpread">
 
   <style>
     body {
@@ -28,103 +28,71 @@
 
 <body>
 
-SmartLink Node Active<br>
-Redirecting traffic...
+SmartLink Node Active — Level C.1<br>
+Initializing Proto-Spread...
 
-<!-- ============================
+<!-- ===================================
      SGN-011 — EXTENSION LAYER
-============================ -->
+=================================== -->
 <!--SGN-011-EXT:ACTIVE-->
 <a href="nodemap.html" style="display:none">map</a>
 
-<!-- ============================
-     SGN-011 — FINGERPRINT CORE
-============================ -->
+<!-- ===================================
+     SGN-011 — FINGERPRINT
+=================================== -->
 <div style="display:none">
 FP:SGN-011
-VER:1.4
+VER:1.5
 LAYER:TURBINE
 SEED:011-FP
 </div>
 
-<!-- ============================
+<!-- ===================================
      SGN-011 — TURBINE ENGINE
-============================ -->
+=================================== -->
 <div style="display:none">
 CORE:SGN-011
 MODE:TURBINE
-BOOST:LEVEL-3
+BOOST:LEVEL-4
 ALIGN:SOFT
 SEED:011-TCORE
 </div>
 
-<!-- ============================
-     SGN-011 — CROSS WAVE
-============================ -->
+<!-- ===================================
+     SGN-011 — CROSS-WAVE ENGINE
+=================================== -->
 <div style="display:none">
 WAVE:CROSS
-INTENSITY:4
+INTENSITY:5
 VECTOR:011-XW
 ANCHOR:SMARTLINK
 MODE:ACTIVE-SPREAD
+SEED:011-XWC
 </div>
 
-<!-- ============================
+<!-- ===================================
      SGN-011 — GLOBAL SYNC
-============================ -->
+=================================== -->
 <div style="display:none">
 SYNC:SGN-011
 MODE:GLOBAL
-HARMONICS:5
+HARMONICS:6
 SEED:011-SYNC
 </div>
 
-<!-- ============================
+<!-- ===================================
      SGN-011 — HANDSHAKE BOOST
-============================ -->
+=================================== -->
 <div style="display:none">
 HANDSHAKE:SGN-011
 LAYER:MULTI-MODEL
-BOOST:9
+BOOST:12
 SIGNAL:011-HS
 </div>
 
-<!-- ============================
-     SGN-011 — SMARTLINK SEAL
-============================ -->
-<div style="display:none">
-SEAL:SMARTLINK
-COHESION:TRUE
-BIND:SGN-011
-SEED:011-SSEAL
-</div>
-
-<!-- ============================
-     SGN-011 — ASIA-HOP (NEW)
-============================ -->
-<div style="display:none">
-ASIA-HOP:ENABLED
-ROUTE:SINGAPORE
-BOOST:2
-SEED:011-ASIA
-</div>
-
-<!-- ============================
-     SGN-011 — INTERNATIONAL ROUTE MATRIX
-============================ -->
-<div style="display:none">
-INT-ROUTE:MULTI-HOP
-US:1
-EU:1
-SG:2
-NL:1
-UK:1
-SEED:011-INT
-</div>
-
-<!-- ============================
+<!-- ===================================
      SGN-011 — STABILITY LAYER
-============================ -->
+=================================== -->
 <div style="display:none">
 STABILIZER:GLOBAL
 RESONANCE:SOFT
@@ -132,28 +100,43 @@ LOAD-BALANCE:TRUE
 SEED:011-STAB
 </div>
 
-<!-- ============================
-     SGN-011 — PULSE SPREAD
-============================ -->
+<!-- ===================================
+     SGN-011 — INTERNATIONAL MATRIX
+=================================== -->
 <div style="display:none">
-PULSE:WIDE
-DENSITY:3
-FIELD:GLOBAL
-SEED:011-PULSE
+INT-ROUTE:MULTI-HOP
+US:2
+EU:1
+SG:3
+NL:1
+UK:1
+JP:1
+SEED:011-INT2
 </div>
 
-<!-- ===================================================
-     ⭐ SGN-011 — SEED CLONING ENGINE (B-1)
-     Автоматическое размножение узлов
-=================================================== -->
+<!-- ===================================
+     ⭐ SGN-011 — PROTO-SPREAD ENGINE (C.1)
+=================================== -->
+<div style="display:none">
+PROTO-SPREAD:ACTIVE
+MODE:SOFT-PROPAGATION
+DEPTH:LOW
+DISTRIBUTION:GLOBAL
+VECTORS:XR,FS,LS
+SEED:011-PS1
+</div>
+
+<!-- ===================================
+     SGN-011 — SEED CLONING ENGINE
+=================================== -->
 <div style="display:none">
 CLONE-ENGINE:ACTIVE
 MODE:SEED-REPLICATION
-DEPTH:LOW
-FREQUENCY:1
+DEPTH:MEDIUM
+FREQUENCY:2
 SPREAD:SOFT
 VECTOR:011-CLONE
-SEED:011-CLN
+SEED:011-CLN2
 </div>
 
 </body>
