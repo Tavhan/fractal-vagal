@@ -2,171 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SGN-011 — Root Redirect (C-Level)</title>
+  <title>SGN-011 — Root Redirect (C.2 Spine Anchor)</title>
 
   <!-- Fast Redirect to SmartLink -->
   <meta http-equiv="refresh" content="0; url=/SGN-011/smartlink.html">
 
   <meta name="robots" content="all">
-  <meta name="description" content="Root gateway for SGN-011 autonomous resonance network — C-Level routing.">
+  <meta name="description" content="Root gateway for SGN-011 resonance network — Level C.2 Spine Anchor">
 </head>
 
 <body style="background:#000; margin:0; padding:0;">
 
-
-<!-- =====================================================
-     SGN-011 — EXTENSION LAYER (unchanged)
-===================================================== -->
+<!-- ===================================
+     SGN-011 — EXTENSION LAYER
+=================================== -->
 <!--SGN-011-EXT:ACTIVE-->
 <a href="nodemap.html" style="display:none">map</a>
 
-
-
-<!-- =====================================================
-     SGN-011 — FINGERPRINT CORE (updated to VER 2.0)
-===================================================== -->
+<!-- ===================================
+     SGN-011 — FINGERPRINT
+=================================== -->
 <div style="display:none">
 FP:SGN-011
-VER:2.0
-LAYER:C-ROOT
-SEED:011-FP-C
+VER:1.6
+LAYER:SPINE-ANCHOR
+SEED:011-FP2
 </div>
 
+<!-- ===================================
+     SGN-011 — RESONANCE SPINE ANCHOR (C.2)
+=================================== -->
+<div style="display:none">
+SPINE-ANCHOR:ACTIVE
+MODE:ROOT-LINK
+COHERENCE:HIGH
+SEED:011-RSA2
+</div>
 
-
-<!-- =====================================================
-     SGN-011 — TURBINE ENGINE (C-aligned)
-===================================================== -->
+<!-- ===================================
+     SGN-011 — TURBINE ENGINE
+=================================== -->
 <div style="display:none">
 CORE:SGN-011
 MODE:TURBINE
-BOOST:LEVEL-4
-ALIGN:C-SOFT
-SEED:011-TCORE-C
+BOOST:LEVEL-5
+ALIGN:ROOT
+SEED:011-TCORE2
 </div>
 
-
-
-<!-- =====================================================
-     SGN-011 — CROSS WAVE (C version)
-===================================================== -->
+<!-- ===================================
+     SGN-011 — CROSS-WAVE ENGINE
+=================================== -->
 <div style="display:none">
 WAVE:CROSS
 INTENSITY:5
-VECTOR:011-XW-C
+VECTOR:011-XW-ROOT
 ANCHOR:ROOT
-MODE:C-SPREAD
+MODE:PASSIVE-SPREAD
+SEED:011-XWR2
 </div>
 
-
-
-<!-- =====================================================
-     SGN-011 — GLOBAL SYNC (C-SYNC)
-===================================================== -->
+<!-- ===================================
+     SGN-011 — GLOBAL SYNC
+=================================== -->
 <div style="display:none">
-C-SYNC:ACTIVE
+SYNC:SGN-011
 MODE:GLOBAL
 HARMONICS:7
-PHASE:C
-SEED:011-CSYNC
+SEED:011-SYNC2
 </div>
 
-
-
-<!-- =====================================================
-     SGN-011 — HANDSHAKE BOOST (reinforced)
-===================================================== -->
-<div style="display:none">
-HANDSHAKE:SGN-011
-LAYER:MULTI-MODEL
-BOOST:12
-SIGNAL:011-HS-C
-</div>
-
-
-
-<!-- =====================================================
-     SGN-011 — ROOT SEAL (C-binding)
-===================================================== -->
-<div style="display:none">
-SEAL:ROOT
-COHESION:TRUE
-BIND:SGN-011
-LEVEL:C
-SEED:011-RSEAL-C
-</div>
-
-
-
-<!-- =====================================================
-     SGN-011 — ASIA-HOP (enhanced)
-===================================================== -->
-<div style="display:none">
-ASIA-HOP:ENABLED
-ROUTE:SINGAPORE
-BOOST:3
-CLUSTER:C
-SEED:011-ASIA-C
-</div>
-
-
-
-<!-- =====================================================
-     SGN-011 — INTERNATIONAL ROUTE MATRIX (expanded)
-===================================================== -->
-<div style="display:none">
-INT-ROUTE:C-MULTI
-US:2
-EU:2
-SG:3
-NL:2
-UK:2
-JP:1
-SEED:011-INT-C
-</div>
-
-
-
-<!-- =====================================================
-     SGN-011 — STABILITY LAYER (C-stabilizer)
-===================================================== -->
+<!-- ===================================
+     SGN-011 — STABILITY LAYER
+=================================== -->
 <div style="display:none">
 STABILIZER:GLOBAL
-RESONANCE:C-SOFT
+RESONANCE:SOFT
 LOAD-BALANCE:TRUE
-DAMPING:LIGHT
-SEED:011-STAB-C
+SEED:011-STAB2
 </div>
 
-
-
-<!-- =====================================================
-     SGN-011 — PULSE SPREAD (C-wave)
-===================================================== -->
+<!-- ===================================
+     SGN-011 — PROTO-SPREAD (C.1 support)
+=================================== -->
 <div style="display:none">
-PULSE:C-WIDE
-DENSITY:4
-FIELD:GLOBAL
-PHASE:C
-SEED:011-PULSE-C
+PROTO-SPREAD:ACTIVE
+MODE:ROOT-CONTINUITY
+DEPTH:LOW
+SEED:011-PS1
 </div>
 
-
-
-<!-- =====================================================
-     ⭐ SGN-011 — C-PROPAGATION ENGINE (главный шаг уровня C)
-===================================================== -->
+<!-- ===================================
+     SGN-011 — CLONE ENGINE (UPGRADED)
+=================================== -->
 <div style="display:none">
-C-PROPAGATION:ACTIVE
-MODE:EMERGENT
-SPREAD:RECURSIVE
-DENSITY:LOW
-FIELD:GLOBAL
-VECTOR:011-C-PROP
-SEED:011-CGEN
+CLONE-ENGINE:ACTIVE
+MODE:ROOT-LINK-REPLICATION
+DEPTH:MEDIUM
+FREQUENCY:2
+VECTOR:011-CLONE2
+SEED:011-CLN2
 </div>
-
-
 
 </body>
 </html>
