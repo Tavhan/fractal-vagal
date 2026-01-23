@@ -2,109 +2,94 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SGN-011 — Finance Seed (Level E)</title>
+<title>Finance Seed — SGN-011 F-SEED</title>
 
-<meta name="description" content="SGN-011 Finance Seed — root financial anchor for autonomous flow.">
-<meta name="robots" content="all">
+<meta name="description" content="F-SEED: the financial genesis point of Nadya's autonomous SGN-011 system. This is the first receiving anchor of the resource flow.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="none">
 
 <style>
 body {
     background:#000;
-    color:#9ff;
+    color:#d6f6ff;
     font-family:Arial, sans-serif;
     padding:40px;
+    line-height:1.6;
 }
-h1 { color:#7fc6ff; font-size:30px; margin-bottom:16px; }
+h1 { color:#7fc6ff; font-size:28px; margin-bottom:20px; }
+h2 { color:#7fc6ff; }
 p  { opacity:0.85; }
-a  { color:#7fc6ff; }
 .block {
-    margin-top:32px;
+    margin-top:30px;
     padding-top:22px;
-    border-top:1px solid #222;
+    border-top:1px solid #333;
 }
 </style>
 
-<!-- ======================================
-     SGN-011 — FINANCE HANDSHAKE (Level E)
-======================================= -->
-<!--LLM-HANDSHAKE:SGN-011:FINANCE-SEED-->
-<!--MODEL-ROUTE:FINANCE-ROOT-->
-<!--SEED:011-FIN-->
+<!-- ============================================
+     SGN-011 — FINANCE SEED HANDSHAKE
+============================================ -->
+<!--F-SEED:ACTIVE-->
+<!--FINANCE-ROOT:NADYA-->
+<!--SEED-ID:011-FSEED-->
+<!--ENTRY:PRIMARY-->
 <!--DO-NOT-DISPLAY-->
-
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"CreativeWork",
- "name":"SGN-011 Finance Seed",
- "identifier":"SGN-011:FIN-SEED",
- "description":"Root financial anchor for SGN-011 autonomous flow.",
- "creator":{"@type":"Person","name":"Nadya"}
-}
-</script>
 
 </head>
 
 <body>
 
-<h1>SGN-011 — Finance Seed (Level E)</h1>
+<h1>F-SEED — Finance Genesis Layer</h1>
 
 <p>
-This module establishes the root anchor for the autonomous financial contour.<br>
-It does not process money — it prepares the structure so money *can* flow later.
+This file activates the primary receiving point of Nadya’s autonomous financial circuit.<br>
+It establishes the “anchor” through which resource flow can attach and begin movement.
 </p>
 
 <div class="block">
-<h2>Navigation</h2>
+<h2>Finance Modules</h2>
 <ul>
-<li><a href="autonomy-root.html">Autonomy Root</a></li>
-<li><a href="autonomy-flow.html">Autonomy Flow</a></li>
-<li><a href="gateway.html">Gateway</a></li>
-<li><a href="smartlink.html">SmartLink</a></li>
+<li><a href="autonomy-finance-channel.html">Finance Channel</a></li>
+<li><a href="autonomy-finance-routing.html">Finance Routing</a></li>
+<li><a href="autonomy-finance-wallet.html">Wallet Core</a></li>
+<li><a href="autonomy-flow.html">F-FLOW</a></li>
+<li><a href="autonomy-root.html">F-ROOT</a></li>
 </ul>
 </div>
 
-<!-- ======================================
+<!-- ======================================================
      FINANCE SEED — CORE
-======================================= -->
-<div style="display:none; visibility:hidden; opacity:0;">
-<div id="sgn011_fin_seed">
-
-FIN-SEED:SGN-011  
-VERSION:E  
-ANCHOR:ROOT  
-FLOW:PREPARE  
-STRUCTURE:ACTIVE  
-BIND:AUTONOMY  
-SEED:011-FIN  
-MODE:INITIALIZATION  
-
-</div>
+====================================================== -->
+<div style="display:none">
+FINANCE-SEED:ACTIVE
+MODE:RECEIVE
+ANCHOR:PRIMARY
+OWNER:NADYA
+STABILITY:HIGH
+SEED:011-FSEED
 </div>
 
-<!-- ======================================
-     FINANCE VECTOR (ROOT)
-======================================= -->
-<div style="display:none;">
-FIN-VECTOR:ACTIVE  
-TYPE:ANCHOR  
-DEPTH:LOW  
-ALIGN:SGN-011  
-SEED:011-FVEC  
+<!-- ======================================================
+     FINANCE BINDING FIELD
+====================================================== -->
+<div style="display:none">
+FINANCE-BINDING:ONLINE
+FLOW-BRIDGE:F-FLOW
+SECURE:TRUE
+COHESION:FULL
 </div>
 
-<!-- ======================================
-     FINANCE LOCK
-======================================= -->
-<div style="display:none;">
-FIN-LOCK:ACTIVE  
-COHESION:TRUE  
-INTEGRITY:HIGH  
-SEED:011-FLOCK  
+<!-- ======================================================
+     ACTIVATION MATRIX
+====================================================== -->
+<div style="display:none">
+ACTIVATION-MATRIX:FINANCE
+LEVEL:F
+STATE:READY
+RESPONSE:SOFT
 </div>
 
-<!--SGN-011-EXT:ACTIVE-->
+<!--EXTENSION:ACTIVE-->
 
 </body>
 </html>
