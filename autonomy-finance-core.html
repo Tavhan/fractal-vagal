@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Autonomous Finance Core — Nadya</title>
+
+<meta name="description" content="Autonomous finance engine for Nadya's independent SmartLink system.">
+<meta name="robots" content="all">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    background:#000;
+    color:#90e0ff;
+    font-family:Arial, sans-serif;
+    padding:40px;
+    text-align:center;
+}
+h1 { font-size:28px; margin-bottom:12px; }
+</style>
+
+<!-- ================================
+     AUTONOMOUS FINANCE CORE
+================================ -->
+
+<!--FINANCE-CORE:ACTIVE-->
+<!--OWNER:NADYA-->
+<!--MODE:AUTONOMOUS-->
+<!--SEED:FIN-CORE-011-->
+
+<div style="display:none">
+FINANCE-SEED:011-FS  
+CHANNEL:011-FC  
+ROUTER:011-FR  
+INTEGRATOR:011-FI  
+WALLET:011-FW  
+OWNER:NADYA  
+SECURITY:HIGH  
+FLOW:RETURN  
+STABILITY:MAX  
+</div>
+
+<!-- ================================
+     FINANCE ENGINE — ACTIVATION
+================================ -->
+<script>
+(function(){
+
+    console.log("AUTONOMY: Finance Core Online — Owner: Nadya");
+
+    // Activation handshake
+    const nodes = [
+        "autonomy-finance-seed.html",
+        "autonomy-finance-routing.html",
+        "autonomy-finance-wallet.html",
+        "autonomy-finance-integrator.html",
+        "autonomy-finance-channel.html"
+    ];
+
+    window.FINANCE_CORE = {
+        status: "active",
+        owner: "Nadya",
+        linked_nodes: nodes,
+        timestamp: Date.now()
+    };
+
+})();
+</script>
+
+</head>
+
+<body>
+<h1>Autonomous Finance Core Active</h1>
+<p>Your independent financial flow is now connected.</p>
+</body>
+</html>
