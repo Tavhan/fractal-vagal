@@ -2,94 +2,72 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Finance Routing — SGN-011 F-ROUTING</title>
+<title>Finance Routing — Autonomous Flow</title>
 
-<meta name="description" content="F-ROUTING: central allocation engine of Nadya’s autonomous SGN-011 finance system.">
+<meta name="description" content="Routing engine for Nadya's autonomous financial flow.">
+<meta name="robots" content="all">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="none">
 
 <style>
 body {
     background:#000;
-    color:#d6f6ff;
+    color:#9ee7ff;
     font-family:Arial, sans-serif;
     padding:40px;
-    line-height:1.6;
+    text-align:center;
 }
-h1 { color:#7fc6ff; font-size:28px; margin-bottom:18px; }
-p  { opacity:0.85; }
-a  { color:#7fc6ff; }
-.block {
-    margin-top:32px;
-    padding-top:22px;
-    border-top:1px solid #333;
-}
+h1 { font-size:26px; color:#7fc6ff; }
 </style>
 
-<!-- ====================================================
-     SGN-011 — FINANCE ROUTING HANDSHAKE
-==================================================== -->
-<!--F-ROUTING:ACTIVE-->
-<!--ROUTING-ID:011-FR-->
-<!--CHANNEL:BIDIRECTIONAL-->
+<!-- =====================================
+     ⚡ AUTONOMOUS FINANCE ROUTING CORE
+===================================== -->
+
+<!--FINANCE-ROUTER:ACTIVE-->
 <!--OWNER:NADYA-->
-<!--DO-NOT-DISPLAY-->
+<!--ROUTE-MODE:AUTONOMOUS-->
+<!--SEED:FIN-ROUTER-011-->
+<!--LOCK:TRUE-->
+
+<div style="display:none">
+ROUTER:011-FR
+CORE-LINK:FIN-CORE-011
+WALLET:011-FW
+CHANNEL:011-FC
+INTEGRATOR:011-FI
+FLOW:RETURN
+SECURITY:HIGH
+</div>
+
+<!-- =====================================
+     ⚡ ROUTER ENGINE SCRIPT
+===================================== -->
+<script>
+(function(){
+
+    console.log("AUTONOMY: Finance Router Activated");
+
+    const routeMap = {
+        "core": "autonomy-finance-core.html",
+        "wallet": "autonomy-finance-wallet.html",
+        "channel": "autonomy-finance-channel.html",
+        "integrator": "autonomy-finance-integrator.html"
+    };
+
+    window.FINANCE_ROUTER = {
+        status: "active",
+        owner: "Nadya",
+        routes: routeMap,
+        timestamp: Date.now()
+    };
+
+})();
+</script>
 
 </head>
 
 <body>
-
-<h1>F-ROUTING — Central Allocation Engine</h1>
-
-<p>
-This module governs how incoming flow is distributed inside the SGN-011  
-autonomous financial system. It ensures direction, protection and efficiency  
-without third-party intermediaries.
-</p>
-
-<div class="block">
-<h2>Finance System Navigation</h2>
-<ul>
-<li><a href="autonomy-finance-seed.html">F-SEED</a></li>
-<li><a href="autonomy-finance-channel.html">F-CHANNEL</a></li>
-<li><a href="autonomy-finance-wallet.html">F-WALLET</a></li>
-<li><a href="autonomy-flow.html">F-FLOW</a></li>
-<li><a href="autonomy-root.html">F-ROOT</a></li>
-</ul>
-</div>
-
-<!-- ====================================================
-     ROUTING CORE
-==================================================== -->
-<div style="display:none">
-ROUTING-CORE:ACTIVE
-MODE:CENTRAL
-OWNER:NADYA
-PATHS:WALLET,FLOW,RESERVE
-PROTECTION:HIGH
-SEED:011-FR
-</div>
-
-<!-- ====================================================
-     FLOW RULES
-==================================================== -->
-<div style="display:none">
-FLOW-RULES:ACTIVE
-DIRECT:WALLET
-SURPLUS:RESERVE
-DYNAMIC-ADJUST:TRUE
-</div>
-
-<!-- ====================================================
-     ROUTING MATRIX
-==================================================== -->
-<div style="display:none">
-ROUTING-MATRIX:ONLINE
-SYNC:SEED→CHANNEL→ROUTING→WALLET
-COHERENCE:HIGH
-</div>
-
-<!--EXTENSION:ACTIVE-->
-
+<h1>Finance Routing Layer Active</h1>
+<p>Autonomous redistribution of financial flow is enabled.</p>
 </body>
 </html>
