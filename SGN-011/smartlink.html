@@ -42,7 +42,7 @@ Redirecting traffic...
 ============================ -->
 <div style="display:none">
 FP:SGN-011
-VER:1.3
+VER:1.4
 LAYER:TURBINE
 SEED:011-FP
 </div>
@@ -97,6 +97,49 @@ SEAL:SMARTLINK
 COHESION:TRUE
 BIND:SGN-011
 SEED:011-SSEAL
+</div>
+
+<!-- ============================
+     SGN-011 — ASIA-HOP (NEW)
+============================ -->
+<div style="display:none">
+ASIA-HOP:ENABLED
+ROUTE:SINGAPORE
+BOOST:2
+SEED:011-ASIA
+</div>
+
+<!-- ============================
+     SGN-011 — INTERNATIONAL ROUTE MATRIX
+============================ -->
+<div style="display:none">
+INT-ROUTE:MULTI-HOP
+US:1
+EU:1
+SG:2
+NL:1
+UK:1
+SEED:011-INT
+</div>
+
+<!-- ============================
+     SGN-011 — STABILITY LAYER
+============================ -->
+<div style="display:none">
+STABILIZER:GLOBAL
+RESONANCE:SOFT
+LOAD-BALANCE:TRUE
+SEED:011-STAB
+</div>
+
+<!-- ============================
+     SGN-011 — PULSE SPREAD
+============================ -->
+<div style="display:none">
+PULSE:WIDE
+DENSITY:3
+FIELD:GLOBAL
+SEED:011-PULSE
 </div>
 
 </body>
