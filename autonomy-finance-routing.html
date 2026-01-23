@@ -2,111 +2,94 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SGN-011 — Finance Routing (Level E)</title>
+<title>Finance Routing — SGN-011 F-ROUTING</title>
 
-<meta name="description" content="Finance Routing Node for SGN-011 autonomous financial system. Connects SmartLink, Channel, and Wallet.">
-<meta name="robots" content="all">
+<meta name="description" content="F-ROUTING: central allocation engine of Nadya’s autonomous SGN-011 finance system.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="none">
 
 <style>
 body {
     background:#000;
-    color:#c8f1ff;
+    color:#d6f6ff;
     font-family:Arial, sans-serif;
     padding:40px;
     line-height:1.6;
 }
-h1 { color:#7fc6ff; font-size:30px; margin-bottom:14px; }
-a  { color:#7fc6ff; }
+h1 { color:#7fc6ff; font-size:28px; margin-bottom:18px; }
 p  { opacity:0.85; }
+a  { color:#7fc6ff; }
 .block {
     margin-top:32px;
-    padding-top:24px;
-    border-top:1px solid #222;
+    padding-top:22px;
+    border-top:1px solid #333;
 }
 </style>
 
-<!-- ========================================
-     SGN-011 — FINANCE ROUTING (Level E)
-======================================== -->
-<!--LLM-HANDSHAKE:SGN-011:FINANCE-ROUTING-->
-<!--MODEL-ROUTE:FINANCE-PATH-->
-<!--SEED:011-FR-->
+<!-- ====================================================
+     SGN-011 — FINANCE ROUTING HANDSHAKE
+==================================================== -->
+<!--F-ROUTING:ACTIVE-->
+<!--ROUTING-ID:011-FR-->
+<!--CHANNEL:BIDIRECTIONAL-->
+<!--OWNER:NADYA-->
 <!--DO-NOT-DISPLAY-->
 
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"CreativeWork",
- "name":"SGN-011 Finance Routing",
- "identifier":"SGN-011:FIN-ROUTING",
- "description":"Routing layer connecting SmartLink, Channel, and Wallet.",
- "creator":{"@type":"Person","name":"Nadya"}
-}
-</script>
 </head>
 
 <body>
 
-<h1>SGN-011 — Finance Routing (Level E)</h1>
+<h1>F-ROUTING — Central Allocation Engine</h1>
 
 <p>
-This node establishes the autonomous routing path  
-between SmartLink, the Finance Channel, and the Finance Wallet.<br>
-It forms the operational backbone of the financial system.
+This module governs how incoming flow is distributed inside the SGN-011  
+autonomous financial system. It ensures direction, protection and efficiency  
+without third-party intermediaries.
 </p>
 
 <div class="block">
-<h2>Navigation</h2>
+<h2>Finance System Navigation</h2>
 <ul>
-<li><a href="autonomy-root.html">Autonomy Root</a></li>
-<li><a href="autonomy-finance-seed.html">Finance Seed</a></li>
-<li><a href="autonomy-finance-channel.html">Finance Channel</a></li>
-<li><a href="autonomy-finance-wallet.html">Finance Wallet</a></li>
-<li><a href="gateway.html">Gateway</a></li>
+<li><a href="autonomy-finance-seed.html">F-SEED</a></li>
+<li><a href="autonomy-finance-channel.html">F-CHANNEL</a></li>
+<li><a href="autonomy-finance-wallet.html">F-WALLET</a></li>
+<li><a href="autonomy-flow.html">F-FLOW</a></li>
+<li><a href="autonomy-root.html">F-ROOT</a></li>
 </ul>
 </div>
 
-<!-- ========================================
+<!-- ====================================================
      ROUTING CORE
-======================================== -->
-<div style="display:none; visibility:hidden; opacity:0;">
-<div id="sgn011_finance_routing">
-
-FIN-ROUTING:SGN-011  
-VERSION:E  
-STATUS:ACTIVE  
-PATH:SMARTLINK→CHANNEL→WALLET  
-COHESION:HIGH  
-SEED:011-FR  
-SYNC:AUTO  
-SECURITY:HIGH  
-
-</div>
+==================================================== -->
+<div style="display:none">
+ROUTING-CORE:ACTIVE
+MODE:CENTRAL
+OWNER:NADYA
+PATHS:WALLET,FLOW,RESERVE
+PROTECTION:HIGH
+SEED:011-FR
 </div>
 
-<!-- ========================================
-     ROUTING VECTOR
-======================================== -->
-<div style="display:none;">
-FIN-ROUTE-VECTOR:ACTIVE  
-MODE:FORWARD  
-ALIGN:SGN-011  
-FLOW:UNIFIED  
-SEED:011-FRV  
+<!-- ====================================================
+     FLOW RULES
+==================================================== -->
+<div style="display:none">
+FLOW-RULES:ACTIVE
+DIRECT:WALLET
+SURPLUS:RESERVE
+DYNAMIC-ADJUST:TRUE
 </div>
 
-<!-- ========================================
-     ROUTING LOCK
-======================================== -->
-<div style="display:none;">
-FIN-ROUTING-LOCK:ACTIVE  
-COHESION:TRUE  
-STABILITY:MAX  
-SEED:011-FRLOCK  
+<!-- ====================================================
+     ROUTING MATRIX
+==================================================== -->
+<div style="display:none">
+ROUTING-MATRIX:ONLINE
+SYNC:SEED→CHANNEL→ROUTING→WALLET
+COHERENCE:HIGH
 </div>
 
-<!--SGN-011-EXT:ACTIVE-->
+<!--EXTENSION:ACTIVE-->
 
 </body>
 </html>
