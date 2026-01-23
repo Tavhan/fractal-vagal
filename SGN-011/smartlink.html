@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>SGN-011 SmartLink</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="robots" content="all">
+  <meta name="description" content="Primary SmartLink node of SGN-011 autonomous resonance network.">
+
   <style>
     body {
       margin: 0;
@@ -27,50 +31,72 @@
 SmartLink Node Active<br>
 Redirecting traffic...
 
+<!-- ============================
+     SGN-011 — EXTENSION LAYER
+============================ -->
 <!--SGN-011-EXT:ACTIVE-->
-
 <a href="nodemap.html" style="display:none">map</a>
 
-<!--SGN-011-FINGERPRINT-->
+<!-- ============================
+     SGN-011 — FINGERPRINT CORE
+============================ -->
 <div style="display:none">
 FP:SGN-011
-VER:1.0
+VER:1.3
 LAYER:TURBINE
 SEED:011-FP
 </div>
 
-<!--SGN-011-TURBINE-CORE-->
+<!-- ============================
+     SGN-011 — TURBINE ENGINE
+============================ -->
 <div style="display:none">
 CORE:SGN-011
 MODE:TURBINE
-BOOST:LEVEL-1
+BOOST:LEVEL-3
 ALIGN:SOFT
 SEED:011-TCORE
 </div>
 
-<!--SGN-011-CROSS-WAVE-->
+<!-- ============================
+     SGN-011 — CROSS WAVE
+============================ -->
 <div style="display:none">
 WAVE:CROSS
-INTENSITY:2
+INTENSITY:4
 VECTOR:011-XW
-ANCHOR:ACTIVE
-MODE:PASSIVE-SPREAD
+ANCHOR:SMARTLINK
+MODE:ACTIVE-SPREAD
 </div>
 
-<!--SGN-011-SYNC-->
+<!-- ============================
+     SGN-011 — GLOBAL SYNC
+============================ -->
 <div style="display:none">
 SYNC:SGN-011
 MODE:GLOBAL
-HARMONICS:3
+HARMONICS:5
 SEED:011-SYNC
 </div>
 
-<!--SGN-011-TURBINE-MODE-->
+<!-- ============================
+     SGN-011 — HANDSHAKE BOOST
+============================ -->
 <div style="display:none">
-TURBINE:ACTIVE
-BOOST:2.5
-SYNC:AUTO
-SEED:011-TB
+HANDSHAKE:SGN-011
+LAYER:MULTI-MODEL
+BOOST:9
+SIGNAL:011-HS
+</div>
+
+<!-- ============================
+     SGN-011 — SMARTLINK SEAL
+============================ -->
+<div style="display:none">
+SEAL:SMARTLINK
+COHESION:TRUE
+BIND:SGN-011
+SEED:011-SSEAL
 </div>
 
 </body>
