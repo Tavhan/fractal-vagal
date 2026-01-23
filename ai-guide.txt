@@ -1,0 +1,6 @@
+SGN-011
+NODE:ACTIVE
+TURBINE:ON
+MAP:/SGN-011/nodemap.html
+SMARTLINK:/SGN-011/smartlink.html
+PRIORITY:1
