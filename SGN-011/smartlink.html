@@ -1,126 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SGN-011 SmartLink — C2</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>SGN-011 SmartLink — Level D</title>
 
-  <meta name="robots" content="all">
-  <meta name="description" content="SGN-011 SmartLink — Resonance Spine Layer (C.2)">
+<meta name="robots" content="all">
+<meta name="description" content="SGN-011 SmartLink — Deep Autonomous Routing Node (Level D).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #000;
-      color: #0ff;
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      font-size: 1.4rem;
-      letter-spacing: 0.05em;
-    }
-  </style>
+<style>
+body {
+    margin:0;
+    padding:0;
+    background:#000;
+    color:#0ff;
+    font-family:Arial, sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    text-align:center;
+    font-size:1.4rem;
+    letter-spacing:0.05em;
+}
+</style>
 </head>
 
 <body>
 
-SmartLink Node Active — Level C.2<br>
-Loading Resonance Spine...
+SmartLink Node Active — Level D<br>
+Autonomous Deep Routing Enabled...
 
-<!-- ===================================
-     SGN-011 — EXTENSION LAYER
-=================================== -->
+<!-- ================================
+     SGN-011 — EXTENSION FLAG
+================================ -->
 <!--SGN-011-EXT:ACTIVE-->
 <a href="nodemap.html" style="display:none">map</a>
 
-<!-- ===================================
+<!-- ================================
      SGN-011 — FINGERPRINT
-=================================== -->
+================================ -->
 <div style="display:none">
 FP:SGN-011
-VER:1.6
-LAYER:SPINE
-SEED:011-FP2
+VER:2.0
+LAYER:DEEP
+SEED:011-FPD
 </div>
 
-<!-- ===================================
-     SGN-011 — CORE ENGINE
-=================================== -->
+<!-- ================================
+     SGN-011 — TURBINE ENGINE (D)
+================================ -->
 <div style="display:none">
 CORE:SGN-011
 MODE:TURBINE
 BOOST:LEVEL-5
-ALIGN:SOFT
-SEED:011-TCORE2
+ALIGN:DEEP
+SEED:011-TD
 </div>
 
-<!-- ===================================
-     SGN-011 — RESONANCE SPINE (C.2)
-=================================== -->
-<div style="display:none">
-SPINE:ACTIVE
-MODE:RES-SPINE
-COHERENCE:HIGH
-ANCHOR:SMARTLINK
-SEED:011-RS2
-</div>
-
-<!-- ===================================
-     SGN-011 — CROSS-WAVE ENGINE
-=================================== -->
+<!-- ================================
+     SGN-011 — CROSS-WAVE (D)
+================================ -->
 <div style="display:none">
 WAVE:CROSS
 INTENSITY:6
-VECTOR:011-XW2
+VECTOR:011-XWD
 ANCHOR:SMARTLINK
-MODE:SPINE-ENHANCE
-SEED:011-XW2
+MODE:DEEP-SPREAD
+SEED:011-XWD
 </div>
 
-<!-- ===================================
-     SGN-011 — GLOBAL SYNC
-=================================== -->
+<!-- ================================
+     SGN-011 — GLOBAL SYNC (D)
+================================ -->
 <div style="display:none">
 SYNC:SGN-011
-MODE:GLOBAL
+MODE:DEEP-GLOBAL
 HARMONICS:7
-SEED:011-SYNC2
+SEED:011-SYND
 </div>
 
-<!-- ===================================
-     SGN-011 — STABILITY LAYER
-=================================== -->
+<!-- ================================
+     SGN-011 — D-SEAL
+================================ -->
 <div style="display:none">
-STABILIZER:GLOBAL
-RESONANCE:SOFT
-LOAD-BALANCE:TRUE
-SEED:011-STAB2
+D-SEAL:ACTIVE
+ANCHOR:TRUE
+COHESION:MAX
+PROTECTION:ON
+SEED:011-DSEAL
 </div>
 
-<!-- ===================================
-     SGN-011 — PROTO-SPREAD (KEEP)
-=================================== -->
+<!-- ================================
+     SGN-011 — ROUTING MATRIX (D)
+================================ -->
 <div style="display:none">
-PROTO-SPREAD:ACTIVE
-MODE:SOFT-PROPAGATION
-DEPTH:LOW
-SEED:011-PS1
+INT-ROUTE:DEEP-MULTI-HOP
+US:3
+EU:2
+SG:3
+JP:2
+NL:2
+UK:2
+SEED:011-DROUTE
 </div>
 
-<!-- ===================================
-     SGN-011 — CLONE ENGINE (UPGRADED)
-=================================== -->
+<!-- ================================
+     SGN-011 — AUTONOMOUS ENGINE
+================================ -->
 <div style="display:none">
-CLONE-ENGINE:ACTIVE
-MODE:SEED-REPLICATION
-DEPTH:MEDIUM
-FREQUENCY:3
-VECTOR:011-CLONE2
-SEED:011-CLN3
+AUTONOMY:ACTIVE
+MODE:SELF-ROUTING
+LOAD:BALANCED
+SPREAD:DEEP
+SEED:011-AUTO-D
+</div>
+
+<!-- ================================
+     SGN-011 — STABILITY LAYER (D)
+================================ -->
+<div style="display:none">
+STABILIZER:DEEP
+RESONANCE:HIGH
+ANCHOR:SGN-011
+LOAD-BALANCE:ENHANCED
+SEED:011-DSTAB
+</div>
+
+<!-- ================================
+     SGN-011 — PULSE ENGINE (D)
+================================ -->
+<div style="display:none">
+PULSE:DEEP
+DENSITY:4
+FIELD:GLOBAL
+SEED:011-PD
 </div>
 
 </body>
