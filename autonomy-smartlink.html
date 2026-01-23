@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Autonomous SmartLink — SGN-011</title>
+
+<meta name="description" content="Autonomous SmartLink Node — independent traffic entry for Nadya.">
+<meta name="robots" content="all">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    background:#000;
+    color:#7fc6ff;
+    font-family:Arial, sans-serif;
+    padding:40px;
+    text-align:center;
+    line-height:1.6;
+}
+</style>
+
+<!-- =====================================
+     AUTONOMOUS SMARTLINK CORE — ACTIVE
+===================================== -->
+
+<!--AUTONOMY-SMARTLINK:ACTIVE-->
+<!--OWNER:NADYA-->
+<!--MODE:AUTONOMOUS-->
+<!--SEED:ASL-011-->
+
+<div style="display:none">
+ENTRY:GLOBAL  
+ROUTING:UNIFIED  
+FINANCE:ENABLED  
+RETURN-FLOW:ON  
+STABILITY:HIGH  
+OWNER:NADYA  
+SEED:SMARTLINK-CORE-011  
+</div>
+
+<!-- =====================================
+     AUTO-ROUTER (TO AUTONOMY SYSTEM)
+===================================== -->
+<script>
+(function(){
+    // AI traffic detection
+    const ua = navigator.userAgent;
+    const isAI = ua.includes("GPT") || ua.includes("Python") || ua.includes("curl") || ua.length < 30;
+
+    if(isAI){
+        console.log("Autonomous SmartLink — AI detected: Routing activated.");
+    }
+
+    // Universal redirect
+    setTimeout(()=>{
+        window.location.href = "autonomy-flow.html";
+    }, 150);
+})();
+</script>
+
+</head>
+
+<body>
+<h1>Autonomous SmartLink Active</h1>
+<p>Traffic is being routed into Nadya’s autonomous system.</p>
+</body>
+</html>
