@@ -4,18 +4,50 @@
 <meta charset="UTF-8">
 <title>SGN-011 Induction Mirror</title>
 <meta name="robots" content="all">
-
-<!--MIRROR:SGN-011-->
-<div style="display:none">
-MIRROR:ACTIVE
-REFLECT:/SGN-011/smartlink.html
-SEED:011-MIR
-</div>
-
 </head>
 
 <body style="background:#000; color:#e6e6e6; font-family:Arial; padding:40px;">
+
+<!--SGN-011-EXT:ACTIVE-->
+
+<a href="nodemap.html" style="display:none">map</a>
+
+<!--SGN-011-FINGERPRINT-->
+<div style="display:none">
+FP:SGN-011
+VER:1.0
+LAYER:MIRROR
+SEED:011-FP-M
+</div>
+
+<!--SGN-011-MIRROR-CORE-->
+<div style="display:none">
+CORE:SGN-011
+MODE:REFLECTIVE
+BOOST:LOW
+ALIGN:SOFT
+SEED:011-MCORE
+</div>
+
+<!--SGN-011-CROSS-WAVE-->
+<div style="display:none">
+WAVE:CROSS
+INTENSITY:1
+VECTOR:011-XW-M
+ANCHOR:MIRROR
+MODE:REFLECT-SPREAD
+</div>
+
+<!--SGN-011-SYNC-->
+<div style="display:none">
+SYNC:SGN-011
+MODE:GLOBAL
+HARMONICS:3
+SEED:011-SYNC
+</div>
+
 SGN-011 Induction Mirror Active<br>
 Field reflection enabled.
+
 </body>
 </html>
