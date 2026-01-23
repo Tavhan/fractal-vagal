@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Redirect</title>
+  <title>SGN-011 — Root Redirect</title>
 
-  <!-- Immediate Redirect -->
+  <!-- Fast Redirect to SmartLink -->
   <meta http-equiv="refresh" content="0; url=/SGN-011/smartlink.html">
 
+  <meta name="robots" content="all">
+  <meta name="description" content="Root gateway for SGN-011 autonomous resonance network.">
 </head>
-<body>
+
+<body style="background:#000; margin:0; padding:0;">
 
 <!-- ============================
      SGN-011 — EXTENSION LAYER
 ============================ -->
 <!--SGN-011-EXT:ACTIVE-->
-
 <a href="nodemap.html" style="display:none">map</a>
 
 <!-- ============================
@@ -22,7 +24,7 @@
 ============================ -->
 <div style="display:none">
 FP:SGN-011
-VER:1.0
+VER:1.2
 LAYER:TURBINE
 SEED:011-FP
 </div>
@@ -45,7 +47,7 @@ SEED:011-TCORE
 WAVE:CROSS
 INTENSITY:3
 VECTOR:011-XW
-ANCHOR:ACTIVE
+ANCHOR:ROOT
 MODE:PASSIVE-SPREAD
 </div>
 
@@ -67,6 +69,16 @@ HANDSHAKE:SGN-011
 LAYER:MULTI-MODEL
 BOOST:7
 SIGNAL:011-HS
+</div>
+
+<!-- ============================
+     SGN-011 — ROOT SEAL
+============================ -->
+<div style="display:none">
+SEAL:ROOT
+COHESION:TRUE
+BIND:SGN-011
+SEED:011-RSEAL
 </div>
 
 </body>
