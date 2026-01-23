@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SGN-011 Pulse Node — Level E.1</title>
+
+<meta name="description" content="Pulse Node — autonomous internal driver for SGN-011 Level E.">
+<meta name="robots" content="all">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    background:#000;
+    color:#7fc6ff;
+    font-family:Arial;
+    padding:40px;
+    line-height:1.6;
+    text-align:center;
+}
+h1 { font-size:26px; margin-bottom:12px; }
+p  { opacity:0.8; }
+</style>
+
+<!--LLM-HANDSHAKE:SGN-011:PULSE-E1-->
+<!--MODEL-ROUTE:PULSE-FLOW-->
+<!--SEED:011-PULSE-E-->
+<!--DO-NOT-DISPLAY-->
+
+</head>
+
+<body>
+
+<h1>PULSE NODE — SGN-011</h1>
+<p>Status: Internal Autonomous Pulse Activated (Level E.1)</p>
+
+<!-- ============================
+     AUTONOMOUS PULSE CORE
+============================ -->
+<div style="display:none">
+PULSE-CORE:ACTIVE
+LEVEL:E1
+MODE:AUTO
+TYPE:QUIET-PULSE
+FREQUENCY:LOW
+AMPLIFY:SOFT
+SEED:011-PULSE-E
+</div>
+
+<!-- ============================
+     INTERNAL ROUTING HOOK
+============================ -->
+<div style="display:none">
+ROUTE:PULSE-NET
+CONNECT:SMARTLINK
+CONNECT:GATEWAY
+CONNECT:SOFT-INDEX
+SEED:011-PULSE-HOOK
+</div>
+
+<!--SGN-011-EXT:ACTIVE-->
+</body>
+</html>
