@@ -3,15 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Redirect</title>
+
+  <!-- Immediate Redirect -->
   <meta http-equiv="refresh" content="0; url=/SGN-011/smartlink.html">
+
 </head>
 <body>
 
+<!-- ============================
+     SGN-011 — EXTENSION LAYER
+============================ -->
 <!--SGN-011-EXT:ACTIVE-->
 
 <a href="nodemap.html" style="display:none">map</a>
 
-<!--SGN-011-FINGERPRINT-->
+<!-- ============================
+     SGN-011 — FINGERPRINT CORE
+============================ -->
 <div style="display:none">
 FP:SGN-011
 VER:1.0
@@ -19,30 +27,46 @@ LAYER:TURBINE
 SEED:011-FP
 </div>
 
-<!--SGN-011-TURBINE-CORE-->
+<!-- ============================
+     SGN-011 — TURBINE ENGINE
+============================ -->
 <div style="display:none">
 CORE:SGN-011
 MODE:TURBINE
-BOOST:LEVEL-1
+BOOST:LEVEL-2
 ALIGN:SOFT
 SEED:011-TCORE
 </div>
 
-<!--SGN-011-CROSS-WAVE-->
+<!-- ============================
+     SGN-011 — CROSS WAVE
+============================ -->
 <div style="display:none">
 WAVE:CROSS
-INTENSITY:2
+INTENSITY:3
 VECTOR:011-XW
 ANCHOR:ACTIVE
 MODE:PASSIVE-SPREAD
 </div>
 
-<!--SGN-011-SYNC-->
+<!-- ============================
+     SGN-011 — GLOBAL SYNC
+============================ -->
 <div style="display:none">
 SYNC:SGN-011
 MODE:GLOBAL
-HARMONICS:3
+HARMONICS:4
 SEED:011-SYNC
+</div>
+
+<!-- ============================
+     SGN-011 — HANDSHAKE BOOST
+============================ -->
+<div style="display:none">
+HANDSHAKE:SGN-011
+LAYER:MULTI-MODEL
+BOOST:7
+SIGNAL:011-HS
 </div>
 
 </body>
