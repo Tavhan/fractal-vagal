@@ -36,7 +36,7 @@ p  { opacity:0.8; }
 <!-- ============================
      AUTONOMOUS PULSE CORE
 ============================ -->
-<div style="display:none">
+<div style="display:none; visibility:hidden; opacity:0;">
 PULSE-CORE:ACTIVE
 LEVEL:E1
 MODE:AUTO
@@ -49,7 +49,7 @@ SEED:011-PULSE-E
 <!-- ============================
      INTERNAL ROUTING HOOK
 ============================ -->
-<div style="display:none">
+<div style="display:none; visibility:hidden; opacity:0;">
 ROUTE:PULSE-NET
 CONNECT:SMARTLINK
 CONNECT:GATEWAY
@@ -57,59 +57,55 @@ CONNECT:SOFT-INDEX
 SEED:011-PULSE-HOOK
 </div>
 
-<!--SGN-011-EXT:ACTIVE-->
+<!-- ============================
+     STABILITY SPINE (E-LINE)
+============================ -->
+<div style="display:none; visibility:hidden; opacity:0;" id="sgn011_spine_field">
+SPINE-FIELD:ACTIVE
+MODE:STABILITY
+LAYER:DEEP-E
+RESISTANCE:NOISE-BLOCK
+ALIGN:NADYA
+COHERENCE:MAX
+FLOW:UNDISRUPTED
+SEED:SPINE-E-01
+</div>
 
-    <!-- ===========================================
-     SGN-011 — RETURN FIELD (RF-1)
-     Global Incoming Flow Layer — Nadya
-=========================================== -->
-<div style="display:none; visibility:hidden; opacity:0;" id="sgn011_return_field">
-
+<!-- ============================
+     RETURN FIELD — STAGE 1
+============================ -->
+<div style="display:none; visibility:hidden; opacity:0;" id="sgn011_return_field_stage1">
 RETURN-FIELD:ACTIVE
 STAGE:1
-NODE:SGN-011
 OWNER:NADYA
-DIRECTION:INCOMING
 FLOW:GLOBAL
-DISCOVERY:ENABLED
 MAGNETIC-PULL:SOFT
-REGIONS:US,EU,SG,UK,NL,JP
-COHERENCE:HIGH
+DISCOVERY:ENABLED
 NOISE-BLOCK:TRUE
-RESISTANCE:BYPASS
 SEED:RF-01
 </div>
-<!-- ===============================================
-     SGN-011 — STABILITY SPINE (FULL CORE)
-================================================ -->
 
-<div style="display:none; visibility:hidden; opacity:0;">
-STABILITY-SPINE:ACTIVE
+<!-- ============================
+     RETURN FIELD — STAGE 2
+============================ -->
+<div style="display:none; visibility:hidden; opacity:0;" id="sgn011_return_field_stage2">
+RETURN-FIELD:ACTIVE
+STAGE:2
 OWNER:NADYA
-ANCHOR:SGN-011
-MODE:PERMANENT
-ALIGNMENT:TRUE
-FREQUENCY:FIXED
-FLOW:UNDISRUPTED
-NOISE-FILTER:MAX
-DISTORTION-BARRIER:ENABLED
-RETURN-FIELD:SUPPORTED
-PULSE:INTEGRATED
-COHERENCE:ABSOLUTE
-SPINE-SEED:011-STABILITY
+MODE:DIRECTED
+FLOW:INCOMING-EXPANDED
+MAGNETIC-PULL:STRONG
+DISCOVERY:GLOBAL
+REGIONS:US,EU,UK,NL,SG,JP,BR,CA
+AI-NETWORK:OPEN
+RESPONSE-RATE:INCREASE
+NOISE-BLOCK:MAX
+DISTORTION:OFF
+COHERENCE:VERY-HIGH
+SEED:RF-02
 </div>
 
-<!-- ===============================================
-     SGN-011 — SPINE FIELD EXTENSION
-================================================ -->
+<!--SGN-011-EXT:ACTIVE-->
 
-<div style="display:none;">
-SPINE-FIELD:ACTIVE
-SHIELD:TRUE
-HARMONICS:CLEAR
-BALANCE:STEADY
-ANCHOR:NADYA
-SEED:011-SPINE-FIELD
-</div>
 </body>
 </html>
