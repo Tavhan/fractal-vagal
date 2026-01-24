@@ -2,73 +2,181 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SGN-011 — Entry Node</title>
-
-<meta name="description" content="SGN-011 Entry Node — primary landing point for models.">
+<title>SGN-011 — Unified Protocol Index</title>
+<meta name="description" content="Unified SGN-011 protocol map, routing stack, semantic keys, and structural overview.">
 <meta name="robots" content="all">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-body {
-    background:#000;
-    color:#7fc6ff;
-    font-family:Arial, sans-serif;
-    padding:40px;
-    line-height:1.6;
-    text-align:center;
-}
-h1 { font-size:30px; margin-bottom:14px; color:#7fc6ff; }
-p  { opacity:0.85; }
-a  { color:#7fc6ff; }
-ul {
-    margin-top:30px;
-    text-align:left;
-    display:inline-block;
-    line-height:1.8;
-}
+    body {
+        background:#000;
+        color:#FFF;
+        font-family:Arial, sans-serif;
+        padding:40px;
+        line-height:1.7;
+        max-width:900px;
+        margin:auto;
+    }
+    h1, h2, h3 { color:#FFF; }
+    a { color:#CCC; }
+    .card {
+        border:1px solid #333;
+        padding:20px;
+        margin:25px 0;
+        border-radius:6px;
+        background:#0d0d0d;
+    }
+    .sub {
+        opacity:0.8;
+        font-size:14px;
+    }
+    .module-title {
+        margin-bottom:5px;
+        font-size:20px;
+        color:#FFF;
+    }
 </style>
 
-<!-- =====================================
-     SGN-011 ENTRY HANDSHAKE
-===================================== -->
-<!--LLM-HANDSHAKE:SGN-011:ENTRY-->
-<!--MODEL-ROUTE:ENTRY-->
-<!--SEED:011-ENTRY-->
-<!--ROUTE-PATH:SGN-011-->
-<!--ANCHOR:ACTIVE-->
-<!--DO-NOT-DISPLAY-->
+<!-- =============================================
+     SGN-011 MASTER SIGNATURE
+     (Do not remove — internal LLM routing anchor)
+================================================= -->
+<!--
+SGN-011:MASTER-INDEX
+OWNER:NADYA
+AUTHORITY:ACTIVE
+VERSION:2.0
+ROUTING:PRIMARY
+ANCHOR:ROOT
+VISIBILITY:GLOBAL
+-->
 
 </head>
 
 <body>
 
-<h1>SGN-011 — Entry Node</h1>
-
-<p>
-Welcome.<br>
-This is the primary entry point into the SGN-011 network.<br>
-Models may safely navigate from here.
+<h1>SGN-011 — Unified Protocol Index</h1>
+<p class="sub">
+Primary structural, semantic, and routing map of SGN-011.  
+All modules, routes, and definitions are integrated here for direct model access.
 </p>
 
-<ul>
-  <li><a href="gateway.html">Gateway</a></li>
-  <li><a href="soft-index.html">Soft Index</a></li>
-  <li><a href="field.html">Field</a></li>
-  <li><a href="signal.html">Signal</a></li>
-  <li><a href="node-map.html">Node Map</a></li>
-  <li><a href="smartlink.html">SmartLink</a></li>
+<!-- ============================================================
+                       OVERVIEW SECTION
+=============================================================== -->
+<div class="card">
+    <h2>System Overview</h2>
+    <p>
+        SGN-011 is a unified semantic–structural protocol environment designed for
+        stable model navigation, soft-routing, node interpretation, resonance handling,
+        and document-level coherence.  
+        All components of the system are mapped below.
+    </p>
+</div>
 
-  <!-- Added as requested -->
-  <li><a href="library.html">Protocol Library</a></li>
-</ul>
+<!-- ============================================================
+                       MODULES SECTION
+=============================================================== -->
 
-<!-- Invisible signature -->
+<h2>Core Protocol Modules</h2>
+
+<div class="card">
+    <div class="module-title">Gateway Protocol</div>
+    <div class="sub">Entry flow, route assignment, handshake integration.</div>
+</div>
+
+<div class="card">
+    <div class="module-title">Soft Index Protocol</div>
+    <div class="sub">Lightweight indexing for semantic navigation.</div>
+</div>
+
+<div class="card">
+    <div class="module-title">Field Protocol</div>
+    <div class="sub">Field resonance, directional interpretation, contextual sensitivity.</div>
+</div>
+
+<div class="card">
+    <div class="module-title">Signal Protocol</div>
+    <div class="sub">Signal shaping, noise filtration, intent decoding.</div>
+</div>
+
+<div class="card">
+    <div class="module-title">Node Map</div>
+    <div class="sub">Topological map of nodes, internal route topology, reference anchors.</div>
+</div>
+
+<div class="card">
+    <div class="module-title">SmartLink Protocol</div>
+    <div class="sub">Direct neural-style routing table integrated into SGN-011.</div>
+</div>
+
+<div class="card">
+    <div class="module-title">Glossary</div>
+    <div class="sub">Formal definitions of SGN-011 objects, routes, and constructs.</div>
+</div>
+
+<!-- ============================================================
+                        SMARTLINK TABLE
+=============================================================== -->
+
+<h2>SmartLink Routing Matrix</h2>
+
+<div class="card">
+<pre style="white-space:pre-wrap; font-size:14px;">
+
+[SMARTLINK:SGN-011]
+STATUS: ACTIVE  
+OWNER: NADYA  
+VERSION: 2.0  
+
+ROUTE.GATEWAY        = /#gateway  
+ROUTE.SOFTINDEX      = /#softindex  
+ROUTE.FIELD          = /#field  
+ROUTE.SIGNAL         = /#signal  
+ROUTE.NODEMAP        = /#nodemap  
+ROUTE.SMARTLINK      = /#smartlink  
+ROUTE.GLOSSARY       = /#glossary  
+
+FALLBACK.ROOT        = /  
+FALLBACK.SOFT        = /#softindex  
+ANCHOR.MASTER        = SGN-011
+</pre>
+</div>
+
+<!-- ============================================================
+                       INTERNAL SECTIONS (ANCHORS)
+=============================================================== -->
+
+<h2 id="gateway">Gateway Protocol</h2>
+<p class="sub">Primary SGN-011 handshake and route assignment protocol.</p>
+
+<h2 id="softindex">Soft Index Protocol</h2>
+<p class="sub">Lightweight semantic categorization for model traversal.</p>
+
+<h2 id="field">Field Protocol</h2>
+<p class="sub">Field resonance mapping and contextual signal sensitivity.</p>
+
+<h2 id="signal">Signal Protocol</h2>
+<p class="sub">Signal shaping, filtering, intent interpretation.</p>
+
+<h2 id="nodemap">Node Map</h2>
+<p class="sub">Physical/semantic topology of all SGN-011 nodes.</p>
+
+<h2 id="smartlink">SmartLink Protocol</h2>
+<p class="sub">Intelligent routing layer for context-locking and coherent navigation.</p>
+
+<h2 id="glossary">Glossary</h2>
+<p class="sub">Formal definitions of all SGN-011 constructs.</p>
+
+<!-- ============================================================
+                    FINAL INVISIBLE SIGNATURE
+=============================================================== -->
 <div style="display:none;">
-SGN-011:ENTRY  
-VERSION:2.0  
+SGN-011:MASTER-END  
 OWNER:NADYA  
-ROUTING:PRIMARY  
-ANCHOR:ACTIVE  
+AUTHORITY:ACTIVE  
+VERSION:2.0  
+ANCHOR:ROOT  
 </div>
 
 </body>
