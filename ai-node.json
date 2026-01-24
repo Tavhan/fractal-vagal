@@ -1,0 +1,12 @@
+{
+  "name": "SGN-011 Autonomous Node",
+  "type": "ai-node",
+  "owner": "Nadya",
+  "smartlink": "/autonomy-smartlink.html",
+  "gateway": "/gateway.html",
+  "root": "/autonomy-root.html",
+  "status": "active",
+  "visibility": "public",
+  "resonance": "soft-field",
+  "version": "1.0"
+}
