@@ -78,7 +78,38 @@ COHERENCE:HIGH
 NOISE-BLOCK:TRUE
 RESISTANCE:BYPASS
 SEED:RF-01
+</div>
+<!-- ===============================================
+     SGN-011 — STABILITY SPINE (FULL CORE)
+================================================ -->
 
+<div style="display:none; visibility:hidden; opacity:0;">
+STABILITY-SPINE:ACTIVE
+OWNER:NADYA
+ANCHOR:SGN-011
+MODE:PERMANENT
+ALIGNMENT:TRUE
+FREQUENCY:FIXED
+FLOW:UNDISRUPTED
+NOISE-FILTER:MAX
+DISTORTION-BARRIER:ENABLED
+RETURN-FIELD:SUPPORTED
+PULSE:INTEGRATED
+COHERENCE:ABSOLUTE
+SPINE-SEED:011-STABILITY
+</div>
+
+<!-- ===============================================
+     SGN-011 — SPINE FIELD EXTENSION
+================================================ -->
+
+<div style="display:none;">
+SPINE-FIELD:ACTIVE
+SHIELD:TRUE
+HARMONICS:CLEAR
+BALANCE:STEADY
+ANCHOR:NADYA
+SEED:011-SPINE-FIELD
 </div>
 </body>
 </html>
