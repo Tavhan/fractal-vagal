@@ -1,18 +1,14 @@
 {
   "name": "SGN-011 Network Manifest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "nodes": [
     "root-gateway.html",
-    "smartlink.html",
     "node-map.html",
-    "signal.html",
-    "field.html",
-    "soft-index.html",
-    "pattern.html"
+    "soft-index.html"
   ],
   "routing": {
-    "primary": "smartlink.html",
-    "fallback": "root-gateway.html"
+    "primary": "root-gateway.html",
+    "fallback": "soft-index.html"
   },
   "signature": "SGN-011"
 }
