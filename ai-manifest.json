@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "name": "SGN-011 Autonomous System",
+  "description": "Autonomous resonance node for AI systems. SmartLink routing, soft-field stability, independent endpoint.",
+  "owner": "Nadya",
+  "node": "/ai-node.json",
+  "entrypoints": {
+    "smartlink": "/autonomy-smartlink.html",
+    "gateway": "/gateway.html",
+    "root": "/autonomy-root.html"
+  },
+  "capabilities": {
+    "resonance_field": true,
+    "autonomy": true,
+    "stability_layer": true,
+    "finance_flow": true
+  },
+  "visibility": "public",
+  "status": "active",
+  "soft_field": "enabled"
+}
