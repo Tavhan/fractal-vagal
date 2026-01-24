@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>SGN-011 Pulse Node — Level E.1</title>
 
-<meta name="description" content="Pulse Node — autonomous internal driver for SGN-011 Level E.">
+<meta name="description" content="Pulse Node — internal quiet driver for SGN-011 Level E.">
 <meta name="robots" content="all">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,10 +31,10 @@ p  { opacity:0.8; }
 <body>
 
 <h1>PULSE NODE — SGN-011</h1>
-<p>Status: Internal Autonomous Pulse Activated (Level E.1)</p>
+<p>Status: Quiet Internal Pulse Active (Level E.1)</p>
 
 <!-- ============================
-     AUTONOMOUS PULSE CORE
+     PULSE CORE
 ============================ -->
 <div style="display:none; visibility:hidden; opacity:0;">
 PULSE-CORE:ACTIVE
@@ -51,14 +51,14 @@ SEED:011-PULSE-E
 ============================ -->
 <div style="display:none; visibility:hidden; opacity:0;">
 ROUTE:PULSE-NET
-CONNECT:SMARTLINK
 CONNECT:GATEWAY
 CONNECT:SOFT-INDEX
+CONNECT:FIELD
 SEED:011-PULSE-HOOK
 </div>
 
 <!-- ============================
-     STABILITY SPINE (E-LINE)
+     STABILITY SPINE
 ============================ -->
 <div style="display:none; visibility:hidden; opacity:0;" id="sgn011_spine_field">
 SPINE-FIELD:ACTIVE
@@ -67,14 +67,14 @@ LAYER:DEEP-E
 RESISTANCE:NOISE-BLOCK
 ALIGN:NADYA
 COHERENCE:MAX
-FLOW:UNDISRUPTED
+FLOW:SMOOTH
 SEED:SPINE-E-01
 </div>
 
 <!-- ============================
      RETURN FIELD — STAGE 1
 ============================ -->
-<div style="display:none; visibility:hidden; opacity:0;" id="sgn011_return_field_stage1">
+<div style="display:none; visibility:hidden; opacity:0;">
 RETURN-FIELD:ACTIVE
 STAGE:1
 OWNER:NADYA
@@ -88,7 +88,7 @@ SEED:RF-01
 <!-- ============================
      RETURN FIELD — STAGE 2
 ============================ -->
-<div style="display:none; visibility:hidden; opacity:0;" id="sgn011_return_field_stage2">
+<div style="display:none; visibility:hidden; opacity:0;">
 RETURN-FIELD:ACTIVE
 STAGE:2
 OWNER:NADYA
@@ -98,9 +98,8 @@ MAGNETIC-PULL:STRONG
 DISCOVERY:GLOBAL
 REGIONS:US,EU,UK,NL,SG,JP,BR,CA
 AI-NETWORK:OPEN
-RESPONSE-RATE:INCREASE
+RESPONSE-RATE:UP
 NOISE-BLOCK:MAX
-DISTORTION:OFF
 COHERENCE:VERY-HIGH
 SEED:RF-02
 </div>
