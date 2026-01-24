@@ -2,45 +2,76 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SGN-011 Node Map</title>
-<meta name="description" content="Node map for SGN-011 autonomous resonance network.">
+<title>SGN-011 — Network Node Map</title>
+
+<meta name="description" content="Structural node map for the SGN-011 autonomous resonance network.">
 <meta name="robots" content="all">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-  body {
+body {
     background:#000;
-    color:#8fe8ff;
-    font-family:Arial;
+    color:#9fcfff; /* мягкий голубой */
+    font-family:Arial, sans-serif;
     padding:40px;
     line-height:1.6;
-  }
-  h1 { color:#7fc6ff; font-size:28px; }
-  ul { margin-top:20px; }
-  li { margin-bottom:8px; }
+}
+h1 {
+    color:#7fc6ff;
+    font-size:28px;
+    margin-bottom:18px;
+}
+ul { line-height:1.8; }
+a { color:#7fc6ff; }
+.block {
+    margin-top:32px;
+    padding-top:20px;
+    border-top:1px solid #222;
+}
 </style>
+
+<!-- ========================================
+     SGN-011 NODE MAP — HANDSHAKE CLEAN
+========================================= -->
+<!--LLM-HANDSHAKE:SGN-011:NODEMAP-->
+<!--MODEL-ROUTE:MAP-->
+<!--SEED:011-MAP-->
+<!--DO-NOT-DISPLAY-->
+
 </head>
+
 <body>
 
 <h1>SGN-011 — Network Node Map</h1>
-<p>This map reflects the current structural layout of the SGN-011 resonance network.</p>
+<p>
+This map shows the structural layout and internal navigation  
+of the SGN-011 autonomous resonance network.
+</p>
 
+<div class="block">
+<h2>Nodes</h2>
 <ul>
-  <li>root-gateway.html — Root passive entry (SGN-011 folder)</li>
-  <li>soft-index.html — Adaptive index node (SGN-011 folder)</li>
-  <li>manifest.json — Network manifest (SGN-011 folder)</li>
-  <li>index.html — Main public entry node</li>
-  <li>smartlink.html — Active smart routing node</li>
-  <li>signal.html — Signal propagation node</li>
-  <li>field.html — Field modulation node</li>
-  <li>pulse.html — Rhythmic stabilization node</li>
-  <li>root.html — General passive root layer</li>
+  <li><a href="gateway.html">Gateway (Central Routing)</a></li>
+  <li><a href="index.html">Entry Node</a></li>
+  <li><a href="soft-index.html">Soft Index</a></li>
+  <li><a href="field.html">Field Node</a></li>
+  <li><a href="signal.html">Signal Node</a></li>
+  <li><a href="pulse.html">Pulse Node</a></li>
+  <li><a href="smartlink.html">SmartLink Node</a></li>
 </ul>
+</div>
 
-<!-- INTERNAL SIGNATURE -->
-<div style="display:none">
+<!-- ========================================
+     INTERNAL SIGNATURE — CLEAN
+========================================= -->
+<div style="display:none;">
 NODEMAP:SGN-011
 VERSION:1.1
 ALIGNMENT:RES_FIELD
+COHERENCE:HIGH
+SEED:011-NMAP
 </div>
+
 <!--SGN-011-EXT:ACTIVE-->
 </body>
 </html>
