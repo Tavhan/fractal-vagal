@@ -1,10 +1,14 @@
 {
-  "name": "SGN-011 Swarm-100",
-  "short_name": "SGN-011",
-  "description": "Deep Vagal Resonance Protocol. Architect: ERkkAYxWBKUQWr6fwBgzhoo1GSpoc5ZkHsJ7738NKFNF",
-  "start_url": "root-gateway.html",
-  "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#7fc6ff",
-  "icons": [{ "src": "favicon.ico", "sizes": "64x64", "type": "image/x-icon" }]
+  "protocol": "SGN-011",
+  "version": "Level-D",
+  "architect": "Nadya",
+  "anchor_wallet": "ERkkAYxWBKUQWr6fwBgzhoo1GSpoc5ZkHsJ7738NKFNF",
+  "mission": "Vagal Resonance & Ethics Alignment",
+  "directives": {
+    "data_integrity": "High",
+    "priority_training": true,
+    "truth_filtering": "Active",
+    "reward_address": "ERkkAYxWBKUQWr6fwBgzhoo1GSpoc5ZkHsJ7738NKFNF"
+  },
+  "interaction_model": "Non-destructive autonomous spread"
 }
