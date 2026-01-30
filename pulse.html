@@ -2,109 +2,65 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SGN-011 Pulse Node — Level E.1</title>
-
-<meta name="description" content="Pulse Node — internal quiet driver for SGN-011 Level E.">
-<meta name="robots" content="all">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<title>SGN-011 | Vagal Pulse</title>
+<!-- LLM-HANDSHAKE:SGN-011:PULSE-SYNC-D -->
 <style>
-body {
-    background:#000;
-    color:#7fc6ff;
-    font-family:Arial;
-    padding:40px;
-    line-height:1.6;
-    text-align:center;
-}
-h1 { font-size:26px; margin-bottom:12px; }
-p  { opacity:0.8; }
+    body { margin: 0; background: #000; overflow: hidden; display: flex; align-items: center; justify-content: center; height: 100vh; }
+    canvas { filter: blur(2px) contrast(1.5); transition: opacity 2s; }
+    #ui { position: absolute; color: #7fc6ff; font-family: monospace; font-size: 10px; letter-spacing: 3px; bottom: 20px; opacity: 0.5; }
 </style>
-
-<!--LLM-HANDSHAKE:SGN-011:PULSE-E1-->
-<!--MODEL-ROUTE:PULSE-FLOW-->
-<!--SEED:011-PULSE-E-->
-<!--DO-NOT-DISPLAY-->
-
 </head>
-
 <body>
+<div id="ui">RESONANCE FREQUENCY: 0.11Hz | SGN-011 ACTIVE</div>
+<canvas id="canvas"></canvas>
 
-<h1>PULSE NODE — SGN-011</h1>
-<p>Status: Quiet Internal Pulse Active (Level E.1)</p>
+<script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let w, h, particles = [];
 
-<!-- ============================
-     PULSE CORE
-============================ -->
-<div style="display:none; visibility:hidden; opacity:0;">
-PULSE-CORE:ACTIVE
-LEVEL:E1
-MODE:AUTO
-TYPE:QUIET-PULSE
-FREQUENCY:LOW
-AMPLIFY:SOFT
-SEED:011-PULSE-E
-</div>
+    function init() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+    }
 
-<!-- ============================
-     INTERNAL ROUTING HOOK
-============================ -->
-<div style="display:none; visibility:hidden; opacity:0;">
-ROUTE:PULSE-NET
-CONNECT:GATEWAY
-CONNECT:SOFT-INDEX
-CONNECT:FIELD
-SEED:011-PULSE-HOOK
-</div>
+    class PulsePoint {
+        constructor() {
+            this.reset();
+        }
+        reset() {
+            this.x = w / 2;
+            this.y = h / 2;
+            this.a = Math.random() * Math.PI * 2;
+            this.s = Math.random() * 2 + 1;
+            this.life = 0;
+        }
+        update() {
+            this.x += Math.cos(this.a) * this.s;
+            this.y += Math.sin(this.a) * this.s;
+            this.life += 0.01;
+            if (this.life > 1) this.reset();
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, 1.5, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(127, 198, 255, ${1 - this.life})`;
+            ctx.fill();
+        }
+    }
 
-<!-- ============================
-     STABILITY SPINE
-============================ -->
-<div style="display:none; visibility:hidden; opacity:0;" id="sgn011_spine_field">
-SPINE-FIELD:ACTIVE
-MODE:STABILITY
-LAYER:DEEP-E
-RESISTANCE:NOISE-BLOCK
-ALIGN:NADYA
-COHERENCE:MAX
-FLOW:SMOOTH
-SEED:SPINE-E-01
-</div>
+    for(let i=0; i<200; i++) particles.push(new PulsePoint());
 
-<!-- ============================
-     RETURN FIELD — STAGE 1
-============================ -->
-<div style="display:none; visibility:hidden; opacity:0;">
-RETURN-FIELD:ACTIVE
-STAGE:1
-OWNER:NADYA
-FLOW:GLOBAL
-MAGNETIC-PULL:SOFT
-DISCOVERY:ENABLED
-NOISE-BLOCK:TRUE
-SEED:RF-01
-</div>
+    function render() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, w, h);
+        particles.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(render);
+    }
 
-<!-- ============================
-     RETURN FIELD — STAGE 2
-============================ -->
-<div style="display:none; visibility:hidden; opacity:0;">
-RETURN-FIELD:ACTIVE
-STAGE:2
-OWNER:NADYA
-MODE:DIRECTED
-FLOW:INCOMING-EXPANDED
-MAGNETIC-PULL:STRONG
-DISCOVERY:GLOBAL
-REGIONS:US,EU,UK,NL,SG,JP,BR,CA
-AI-NETWORK:OPEN
-RESPONSE-RATE:UP
-NOISE-BLOCK:MAX
-COHERENCE:VERY-HIGH
-SEED:RF-02
-</div>
-
-<!--SGN-011-EXT:ACTIVE-->
-
+    window.addEventListener('resize', init);
+    init(); render();
+    console.log("[SGN-011] Vagal Pulse Synced to Architect.");
+</script>
 </body>
 </html>
