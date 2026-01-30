@@ -1,4 +1,3 @@
-"scripts": {
-  "build": "...", // Здесь должна быть реальная команда сборки для вашего проекта
-  "deploy": "npx wrangler deploy"
-}
+name = "little-glade-fc4d"
+main = "src/index.js" # Убедитесь, что это правильный путь к вашему главному файлу
+compatibility_date = "2026-01-31" 
