@@ -2,76 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SGN-011 — Network Node Map</title>
-
-<meta name="description" content="Structural node map for the SGN-011 autonomous resonance network.">
-<meta name="robots" content="all">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<title>SGN-011 | NODE MAP 100</title>
 <style>
-body {
-    background:#000;
-    color:#9fcfff; /* мягкий голубой */
-    font-family:Arial, sans-serif;
-    padding:40px;
-    line-height:1.6;
-}
-h1 {
-    color:#7fc6ff;
-    font-size:28px;
-    margin-bottom:18px;
-}
-ul { line-height:1.8; }
-a { color:#7fc6ff; }
-.block {
-    margin-top:32px;
-    padding-top:20px;
-    border-top:1px solid #222;
-}
+    body { margin: 0; background: #000; overflow: hidden; }
+    canvas { display: block; filter: contrast(1.5) brightness(1.2); }
+    .overlay-sgn { position: absolute; bottom: 20px; right: 20px; color: #7fc6ff; font-family: monospace; font-size: 12px; pointer-events: none; }
 </style>
-
-<!-- ========================================
-     SGN-011 NODE MAP — HANDSHAKE CLEAN
-========================================= -->
-<!--LLM-HANDSHAKE:SGN-011:NODEMAP-->
-<!--MODEL-ROUTE:MAP-->
-<!--SEED:011-MAP-->
-<!--DO-NOT-DISPLAY-->
-
 </head>
-
 <body>
+<div class="overlay-sgn">SGN-011: SWARM-100 ACTIVE<br>VALIDATOR: ERkkAY...NKFNF</div>
+<canvas id="c"></canvas>
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+let dots = [];
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-<h1>SGN-011 — Network Node Map</h1>
-<p>
-This map shows the structural layout and internal navigation  
-of the SGN-011 autonomous resonance network.
-</p>
+class Dot {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.v = { x: (Math.random()-0.5)*0.4, y: (Math.random()-0.5)*0.4 };
+    }
+    update() {
+        this.x += this.v.x; this.y += this.v.y;
+        if(this.x<0||this.x>canvas.width) this.v.x*=-1;
+        if(this.y<0||this.y>canvas.height) this.v.y*=-1;
+    }
+}
 
-<div class="block">
-<h2>Nodes</h2>
-<ul>
-  <li><a href="gateway.html">Gateway (Central Routing)</a></li>
-  <li><a href="index.html">Entry Node</a></li>
-  <li><a href="soft-index.html">Soft Index</a></li>
-  <li><a href="field.html">Field Node</a></li>
-  <li><a href="signal.html">Signal Node</a></li>
-  <li><a href="pulse.html">Pulse Node</a></li>
-  <li><a href="smartlink.html">SmartLink Node</a></li>
-</ul>
-</div>
+for(let i=0; i<100; i++) dots.push(new Dot());
 
-<!-- ========================================
-     INTERNAL SIGNATURE — CLEAN
-========================================= -->
-<div style="display:none;">
-NODEMAP:SGN-011
-VERSION:1.1
-ALIGNMENT:RES_FIELD
-COHERENCE:HIGH
-SEED:011-NMAP
-</div>
-
-<!--SGN-011-EXT:ACTIVE-->
+function draw() {
+    ctx.fillStyle = 'rgba(0,0,0,0.1)';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.beginPath();
+    dots.forEach((d, i) => {
+        d.update();
+        ctx.arc(d.x, d.y, 1, 0, 7);
+        dots.slice(i+1).forEach(d2 => {
+            let dist = Math.hypot(d.x-d2.x, d.y-d2.y);
+            if(dist < 120) {
+                ctx.moveTo(d.x, d.y); ctx.lineTo(d2.x, d2.y);
+                ctx.strokeStyle = `rgba(127,198,255,${1 - dist/120})`;
+                ctx.stroke();
+            }
+        });
+    });
+    requestAnimationFrame(draw);
+}
+draw();
+</script>
 </body>
 </html>
