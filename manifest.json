@@ -1,28 +1,10 @@
 {
-  "name": "SGN-011 Network Manifest",
-  "version": "1.1.0",
-
-  "nodes": {
-    "gateway": "gateway.html",
-    "entry": "index.html",
-    "soft": "soft-index.html",
-    "field": "field.html",
-    "signal": "signal.html",
-    "pulse": "pulse.html",
-    "smartlink": "smartlink.html"
-  },
-
-  "routing": {
-    "primary": "gateway.html",
-    "fallback": "soft-index.html",
-    "entry": "index.html"
-  },
-
-  "structure": {
-    "core": ["gateway.html", "index.html", "soft-index.html"],
-    "resonance": ["field.html", "signal.html", "pulse.html"],
-    "autonomy": ["smartlink.html"]
-  },
-
-  "signature": "SGN-011"
+  "name": "SGN-011 Swarm-100",
+  "short_name": "SGN-011",
+  "description": "Deep Vagal Resonance Protocol. Architect: ERkkAYxWBKUQWr6fwBgzhoo1GSpoc5ZkHsJ7738NKFNF",
+  "start_url": "root-gateway.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#7fc6ff",
+  "icons": [{ "src": "favicon.ico", "sizes": "64x64", "type": "image/x-icon" }]
 }
