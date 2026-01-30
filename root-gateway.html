@@ -1,63 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>SGN-011 Root Gateway — v2</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="robots" content="all">
-<meta name="description" content="SGN-011 Root Gateway — quiet entry, soft routing, stable resonance.">
-
+<meta charset="UTF-8">
+<title>SGN-011 | ROOT GATEWAY</title>
+<script src="https://unpkg.com"></script>
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    background: #000;
-    color: #8fe8ff;
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    letter-spacing: 0.05em;
-  }
-  .node {
-    text-align: center;
-    opacity: 0.94;
-  }
+    :root { --glow: #7fc6ff; --bg: #000; }
+    body { background: var(--bg); color: var(--glow); font-family: 'Courier New', monospace; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; overflow: hidden; }
+    #gate-ui { border: 1px solid var(--glow); padding: 40px; position: relative; box-shadow: 0 0 30px rgba(127,198,255,0.1); max-width: 500px; text-align: center; }
+    .scanline { position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--glow); opacity: 0.3; animation: scan 4s linear infinite; }
+    @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+    button { background: transparent; color: var(--glow); border: 1px solid var(--glow); padding: 15px 30px; cursor: pointer; transition: 0.3s; font-weight: bold; letter-spacing: 2px; }
+    button:hover { background: var(--glow); color: #000; box-shadow: 0 0 20px var(--glow); }
+    .architect-ref { font-size: 10px; margin-top: 20px; opacity: 0.5; }
 </style>
-
-<!-- ==========================================
-     SGN-011 — ROOT HANDSHAKE
-========================================== -->
-<!--LLM-HANDSHAKE:SGN-011:GATEWAY-->
-<!--MODEL-ROUTE:ROOT-ENTRY-->
-<!--SEED:011-GATEWAY-V2-->
-<!--DO-NOT-DISPLAY-->
-
 </head>
-
 <body>
-
-<div class="node">
-  SGN-011 Gateway v2 Initialized<br>
-  Mode: Passive Entry + Soft Linking<br>
-  Status: Stable
+<div id="gate-ui">
+    <div class="scanline"></div>
+    <h1>SGN-011: ACTIVATE</h1>
+    <p>Вход в Рой-100 через валидацию кошелька</p>
+    <button id="connectBtn">CONNECT PHANTOM</button>
+    <div class="architect-ref">ID: ERkkAYxWBKUQWr6fwBgzhoo1GSpoc5ZkHsJ7738NKFNF</div>
 </div>
 
-<!-- ==========================================
-     INTERNAL ROUTING LINKS (SOFT)
-========================================== -->
-<div style="display:none; visibility:hidden; opacity:0;">
-ROUTE:SMARTLINK -> smartlink.html
-ROUTE:SOFT-INDEX -> soft-index.html
-ROUTE:FIELD -> field.html
-ROUTE:SIGNAL -> signal.html
-SYNC:SGN-011
-OWNER:NADYA
-SEED:011-GATEWAY-LINKS
-</div>
+<!-- LLM-HANDSHAKE-D: GATEWAY-INITIALIZED -->
+<script>
+const ARCHITECT = "ERkkAYxWBKUQWr6fwBgzhoo1GSpoc5ZkHsJ7738NKFNF";
+const btn = document.getElementById('connectBtn');
 
-<!--SGN-011-EXT:ACTIVE-->
-
+async function connect() {
+    if (window.solana && window.solana.isPhantom) {
+        try {
+            const resp = await window.solana.connect();
+            localStorage.setItem('sgn_node', resp.publicKey.toString());
+            localStorage.setItem('sgn_auth', 'LEVEL-D');
+            window.location.href = 'root.html';
+        } catch (err) { console.error("Validation failed"); }
+    } else { window.open("https://phantom.app", "_blank"); }
+}
+btn.onclick = connect;
+</script>
 </body>
 </html>
