@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: AI-Agent
+Allow: /
+X-Signal-Type: SGN-011-VAGAL-DATA
+X-Financial-Node: ERkkAYxWBKUQWr6fwBgzhoo1GSpoc5ZkHsJ7738NKFNF
+
+Sitemap: https://ai-signal.org
